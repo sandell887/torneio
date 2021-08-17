@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="Width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+		crossorigin="anonymous"></script>
+
+	<!-- vue cdn  -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<!-- firebase cdn  -->
+	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+	<title>Sumô</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="setInterval('Atualizar()',5000)" oncontextmenu="return false" ondragstart="return false"onselectstart="return false" >
+	<div id="app">
+		<header>
+			<nav class="pt-5">
+				<!-- logo  -->
+				<h1 class="animate__animated animate__pulse animate__infinite infinite">
+					<i class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i></i> Ranking Sumô <i
+						class="em em-trophy" aria-role="presentation" aria-label="TROPHY"></i></i>
+				</h1>
+				<h1>Nível 1</h1>
+
+				<!-- botão de modalidades -->
+				<div class="btn-group mb-3">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						Modalidades
+					</button>
+
+					<!-- menu dropdown  -->
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="../../index.html">início</a></li>
+						<li><a class="dropdown-item" href="../../cabo de geurra/cabogueracg/caboguerra.html">Cabo de
+								geurra</a></li>
+						<li><a class="dropdown-item" href="../../res-alto risco/resgatealtorisco/altorisco.html">Reasgate de
+								Alto Risco</a></li>
+						<li><a class="dropdown-item" href="../../res-no plano/resplano/plano.html">Resgate no Plano</a></li>
+						<li><a class="dropdown-item" href="../../reg-multimidiatico/multimidiatico/multi.html">Registro
+								Multimidiático</a></li>
+						<li><a class="dropdown-item" href="../../via-centro da terra/centroterra/terra.html">Viagem ao
+								Centro da Terra</a></li>
+					</ul>
+
+				</div>
+			</nav>
+		</header>
+
+		<main class="container mt-5">
+			<div class="row">
+				<div class="col-12">
+					<table class="table" v-if="data">
+						<tbody id="tbody">
+							<thead>
+								<td> Equipe </td>
+								<td> Nota </td>
+								<td> Tempo </td>
+							</thead>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="./firebase.js"></script>
+</body>
+
+
+</html>

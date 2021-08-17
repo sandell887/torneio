@@ -1,0 +1,48 @@
+header {
+    background: #1B2029;
+    color: white;
+    margin-top: auto;
+    text-align: end;
+}
+
+.nomeran {
+    background: #1B2029;
+    margin-top: 10px;
+}
+
+.btn-group {
+    margin-right: 15px;
+}
+
+td,
+th {
+    border: 2px solid #ffffff;
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+}
+
+thead {
+    background-color: #1B2029 !important;
+}
+
+#tbody tr:nth-child(1) td {
+    background-color: rgb(245, 160, 3);
+}
+
+#tbody tr:nth-child(2) td {
+    background-color: #c0c0c0;
+}
+
+#tbody tr:nth-child(3) td {
+    background-color: #cd7f32;
+}
+
+body{
+    background-color:#000000;
+}
